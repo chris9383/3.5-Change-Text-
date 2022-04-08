@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UFT-8">
+<link rel="stylesheet"herf="style.ccs">
+    <title>Chnage contents of an  element Notes</title>
+</head>
+<body>
+    <div class="container">
+    <div class="content">
+        <h1>Change Contents Notes</h1>
+        <div class="conatiner">
+        <div class="content">
+      <h1> change Content Notes </h1>
+<div class="row">
+<div>
+<labe for="frist">Frist Named</labe>
+<input type="text" id="frist" name="frist_name"placeholder="jane">
+<div>
+<label for="last">Last Name</label>
+<input type="text" id="last" name="last_name" placeholder="Doe">
+</div>
+</div>
+  <button name="clear">Clear</button>
+    <p></p>
+</div>
+</div>
+        </div>
+         </div>
+        <script>
+            const firstName = document.getElmentbyId('last');
+        const lastName = document.getElementbyId('last');
+      const  full = document.querySelector('p');
+
+      const clearButton = document.querySelector('[name="clear"]');
+
+      firstName.addEventListener('change',function(e) {
+           let first = firstName.value;
+           let last = lastName.value;
+           let fullName = `Hello ${first} ${last}!`;
+           full.textContent = fullName;
+       });
+
+
+
+
+
+clearButton.addEventListener('click',function(e){
+    firstName.value="";
+lastName.value="";
+full.textContent = "";
+
+}
+
+
+
+        </script>
+         </body>
+         </html>
