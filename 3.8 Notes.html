@@ -15,7 +15,7 @@
 <script>
     const content = document.querySelector('.content');
     //Replace contents of on html tag using innerHTML
-    content.innerHTML='<h1>I love Zelda </h1><h4>some other message here</h4>';
+    content.innerHTML='<h1 class="gone">I love Zelda </h1><h4>some other message here</h4>';
 
     // add a new element in addition to existing elements
     const zelda = document.createElement('h1');
@@ -26,6 +26,11 @@
     const food=document.createElement('h1');
     food.innerHTML = 'I Love Pizza';
     content.insertAdjacentElement('afterend',food);
+
+// to remove on element
+const unwantedElement = document.querySelector('.gone');
+unwantedElement.remove();
+
 
 
 </script>
